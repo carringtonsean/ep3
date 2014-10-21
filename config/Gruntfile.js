@@ -30,13 +30,13 @@ module.exports = function(grunt)
          {
             files: 
             [
-               'dev/**/*.html'
+               '../dev/**/*.html'
             ],
             tasks: ['html2js', 'concat', 'copy']
          },
          styles: 
          {
-            files: ['dev/**/*.less'],
+            files: ['../dev/**/*.less'],
             tasks: ['less', 'cssmin'],
             options: 
             {
@@ -45,7 +45,7 @@ module.exports = function(grunt)
          },
          scripts:
          {
-            files: ['dev/**/*.js'],
+            files: ['../dev/**/*.js'],
             tasks: ['jshint', 'concat']
          }
       },
@@ -59,7 +59,7 @@ module.exports = function(grunt)
       // Validate files with JSHint.
       jshint: 
       {
-         files: ['dev/**/*.js']
+         files: ['../dev/**/*.js']
       },
 
 
@@ -73,8 +73,8 @@ module.exports = function(grunt)
       {
          main: 
          {
-            src: ['dev/**/*.html'],
-            dest: 'www/js/templates.js'
+            src: ['../dev/**/*.html'],
+            dest: '../www/js/templates.js'
          },
       },
 
@@ -90,17 +90,17 @@ module.exports = function(grunt)
          dist:
          {
             nonull: true,
-            dest: 'www/js/ep3.js',
+            dest: '../www/js/ep3.js',
             src: 
             [
-              'vendor/angular/angular.js',
-              'vendor/angular-ui-router/release/angular-ui-router.js',
-              'vendor/angular-fontawesome/dist/angular-fontawesome.js',
-              'vendor/angular-bootstrap/ui-bootstrap.js',
-              'vendor/angular-bootstrap/ui-bootstrap-tpls.js',
-              'vendor/jquery/dist/jquery.js',
-              'www/js/templates.js',
-              'dev/**/*.js'
+              '../vendor/angular/angular.js',
+              '../vendor/angular-ui-router/release/angular-ui-router.js',
+              '../vendor/angular-fontawesome/dist/angular-fontawesome.js',
+              '../vendor/angular-bootstrap/ui-bootstrap.js',
+              '../vendor/angular-bootstrap/ui-bootstrap-tpls.js',
+              '../vendor/jquery/dist/jquery.js',
+              '../www/js/templates.js',
+              '../dev/**/*.js'
             ]
          }
       },
@@ -124,7 +124,7 @@ module.exports = function(grunt)
             },
             files: 
             {
-               "www/css/ep3.css": "dev/**/*.less"
+               "../www/css/ep3.css": "../dev/**/*.less"
             }
          }
       },
@@ -142,11 +142,11 @@ module.exports = function(grunt)
          {
             files: 
             {
-               'www/css/ep3.css': 
+               '../www/css/ep3.css': 
                [
-                  'www/css/ep3.css',
-                  'vendor/bootstrap/dist/css/bootstrap.min.css',
-                  'vendor/fontawesome/css/font-awesome.css'
+                  '../www/css/ep3.css',
+                  '../vendor/bootstrap/dist/css/bootstrap.min.css',
+                  '../vendor/fontawesome/css/font-awesome.css'
                ]
             }
          }
@@ -165,7 +165,7 @@ module.exports = function(grunt)
          {
             options:
             {
-               base:'www',
+               base:'../www',
                port: 3333
             }
          }
@@ -186,16 +186,16 @@ module.exports = function(grunt)
             files:
             [
                {
-                  nonull: true, expand:true, cwd: 'vendor/bootstrap/fonts/', src: ['**'], dest: 'www/fonts/'
+                  nonull: true, expand:true, cwd: '../vendor/bootstrap/fonts/', src: ['**'], dest: '../www/fonts/'
                },
                {
-                  nonull: true, expand:true, cwd: 'vendor/fontawesome/fonts/', src: ['**'], dest: 'www/fonts/'
+                  nonull: true, expand:true, cwd: '../vendor/fontawesome/fonts/', src: ['**'], dest: '../www/fonts/'
                },
                {
-                  nonull: true, expand:true, cwd: 'dev/common/images/', src: ['**'], dest: 'www/images/'
+                  nonull: true, expand:true, cwd: '../dev/common/images/', src: ['**'], dest: '../www/images/'
                },
                {
-                  nonull: true, expand:true, cwd: 'dev/app/_root/', src: ['index.html'], dest: 'www/'
+                  nonull: true, expand:true, cwd: '../dev/app/_root/', src: ['index.html'], dest: '../www/'
                }
             ]
          }
