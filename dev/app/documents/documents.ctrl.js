@@ -8,7 +8,7 @@ angular.module('app.documents', [])
       views: {
          '@': {
             controller: 'DocumentsCtrl',
-            templateUrl: '../dev/app/documents/documents.html'
+            templateUrl: '../../dev/app/documents/documents.html'
          }
       }
    });
