@@ -1,4 +1,4 @@
-angular.module('app', ['ui.router', 'app.modules'])
+angular.module('app', ['ui.router', 'templates-main', 'app.baseStates'])
 
 
 

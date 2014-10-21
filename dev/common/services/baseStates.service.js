@@ -1,6 +1,5 @@
-angular.module('app.modules', 
+angular.module('app.baseStates', 
 [
-  'templates-main',
   'app.account',
   'app.documents',
   'app.home',
