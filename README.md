@@ -19,12 +19,12 @@
 * [Back to Top](#setup-local-box)
 
 #Run NPM Install
-* Make sure the directory you are in contains Gruntfile.js and package.json
+* Navigate to ep3/config
 * Run "sudo npm install --save"
 * [Back to Top](#setup-local-box)
 
 #Run Bower Install
-* Make sure that the directory you are in contains bower.json
+* Navigate to ep3/config
 * Run "bower install"
 * [Back to Top](#setup-local-box)
 
