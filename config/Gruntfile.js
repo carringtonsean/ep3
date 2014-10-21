@@ -1,6 +1,7 @@
 module.exports = function(grunt)
 {
    grunt.loadNpmTasks('grunt-html2js');
+   grunt.loadNpmTasks('grunt-ng-constant');
    grunt.loadNpmTasks('grunt-contrib-less');
    grunt.loadNpmTasks('grunt-contrib-copy');
    grunt.loadNpmTasks('grunt-contrib-watch');
@@ -10,12 +11,36 @@ module.exports = function(grunt)
    grunt.loadNpmTasks('grunt-contrib-connect');
 
 
-   grunt.registerTask('default', ['jshint', 'copy', 'html2js', 'concat', 'less', 'cssmin', 'connect', 'watch']);
+   grunt.registerTask('default', ['jshint', 'ngconstant', 'copy', 'html2js', 'concat', 'less', 'cssmin', 'connect', 'watch']);
 
 
    grunt.initConfig(
    {
       pkg: grunt.file.readJSON('package.json'),
+
+
+
+
+
+      // grunt-ng-constant
+      // https://www.npmjs.org/package/grunt-ng-constant
+      // Plugin for dynamic generation of angular constant modules.
+      ngconstant: 
+      {
+         options: 
+         {
+            name: 'app.constants',
+            dest: '../dev/app/_root/constants.js'
+         },
+         dist: 
+         {
+            constants: 
+            {
+               API: grunt.option('target') === 'prod' ? 'http://example.org/api/' : 'http://localhost:9000/ROOT/api/'
+            }
+         }
+      },
+
 
 
 

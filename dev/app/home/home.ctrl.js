@@ -1,4 +1,5 @@
-angular.module('app.home', ['app.domain.user'])
+angular.module('app.home', ['user.domain'])
+
 
 
 .config(['$stateProvider', function($stateProvider)
@@ -15,8 +16,19 @@ angular.module('app.home', ['app.domain.user'])
 }])
 
 
+
 .controller('HomeCtrl', ['$scope', 'userDomain', function($scope, userDomain)
 {
-  $scope.user = userDomain.newDomain();
-  $scope.user.getUser();
+   $scope.user = userDomain.newDomain();
+
+
+   $scope.user.getUser()
+      .then(function()
+      {
+         alert('User api call valid');
+      })
+      .catch(function()
+      {
+         alert('User api call invalid');
+      });
 }]);
