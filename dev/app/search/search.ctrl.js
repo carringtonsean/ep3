@@ -8,7 +8,7 @@ angular.module('app.search', [])
       views: {
          '@': {
             controller: 'SearchCtrl',
-            templateUrl: '../dev/app/search/search.html'
+            templateUrl: '../../dev/app/search/search.html'
          }
       }
    });
