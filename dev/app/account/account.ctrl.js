@@ -17,5 +17,5 @@ angular.module('app.account', [])
 
 .controller('AccountCtrl', ['$scope', function($scope)
 {
-   
+    
 }]);
