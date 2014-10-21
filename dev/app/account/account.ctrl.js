@@ -8,7 +8,7 @@ angular.module('app.account', [])
       views: {
          '@': {
             controller: 'AccountCtrl',
-            templateUrl: '../dev/app/account/account.html'
+            templateUrl: '../../dev/app/account/account.html'
          }
       }
    });
