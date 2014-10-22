@@ -1,8 +1,8 @@
 angular.module('epHeader.directive', [])
 
-.directive("epHeader", function(){
+.directive('epHeader', function(){
 	return{
-		restrict: "E",
+		restrict: 'E',
 		templateUrl: "../../dev/common/directives/ep-header/epHeader.dir.html"
 	};
 });
